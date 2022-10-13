@@ -13,5 +13,5 @@ seaborn==0.11.2
 spacy==3.3.0
 streamlit==1.12.0
 textblob==0.17.1
-transformers==4.21.0.dev0
+transformers==4.21.0
 wordcloud==1.8.1
