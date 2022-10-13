@@ -27,6 +27,7 @@ import nltk
 from nltk.probability import FreqDist
 from rake_nltk import Rake
 nltk.download('stopwords')
+nltk.download('punkt')
 import spacy
 from textblob import TextBlob
 from transformers import pipeline
