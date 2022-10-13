@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import requests
 import statistics
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
@@ -17,7 +17,7 @@ import pdfplumber
 
 #word cloud
 from pathlib import Path
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from wordcloud import STOPWORDS, WordCloud
 
 
