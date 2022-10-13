@@ -52,7 +52,7 @@ def main():
         st.subheader("DocumentFiles")
         docx_files = st.file_uploader("Upload Document", type=["pdf","docx","txt"], accept_multiple_files=True)
         
-        if st.button("Process"):
+        if st.button("Evaluate_Resume"):
             data = []
             for docx_file in docx_files:
                 if docx_file is not None:
