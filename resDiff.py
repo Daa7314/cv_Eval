@@ -37,7 +37,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 
-st.header('Text Comparision Tool Suite')
+st.title('This tool is designed to analyze two text files')
 
 st.subheader("Upload the JD and Resume in PDF, Docx, Txt")
 def main():
@@ -49,7 +49,7 @@ def main():
     elif choice == "Dataset":
         st.subheader("Dataset")
     elif choice == "Resume Eval":
-        st.subheader("Resume Evaluation")
+        #st.subheader("Resume Evaluation")
         docx_files = st.file_uploader("Upload Document", type=["pdf","docx","txt"], accept_multiple_files=True)
         
         if st.button("Evaluate_Resume"):
@@ -83,7 +83,7 @@ def main():
             vector_matrix = count_vectorizer.fit_transform(data)
             cosine_similarity_matrix = cosine_similarity(vector_matrix)
             vx = pd.DataFrame(cosine_similarity_matrix,['resume','jd_text'])
-            st.write("Your resume and Job description match at: ", (round(vx.loc["resume",1], 2) *100 ,'%'))
+            st.write("Your resume and Job description match at: ", (round(vx.loc["resume",1], 2) *100),"%")
 
 #JD keyword extraction
             tok_count= []
