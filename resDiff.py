@@ -37,11 +37,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 
-st.header('Compare your Resume with a Job Listing')
+st.header('Text Comparision Tool Suite')
 
 st.subheader("Upload the JD and Resume in PDF, Docx, Txt")
 def main():
-    menu = ["Image","Dataset","Resume Eval","About"]
+    menu = ["Resume Eval","About"]
     choice = st.sidebar.selectbox("Menu",menu)
 
     if choice == "Image":
@@ -83,7 +83,7 @@ def main():
             vector_matrix = count_vectorizer.fit_transform(data)
             cosine_similarity_matrix = cosine_similarity(vector_matrix)
             vx = pd.DataFrame(cosine_similarity_matrix,['resume','jd_text'])
-            st.subheader("Your resume and Job description match at: ", (round(vx.loc["resume",1], 2) *100 ,'%'))
+            st.write("Your resume and Job description match at: ", (round(vx.loc["resume",1], 2) *100 ,'%'))
 
 #JD keyword extraction
             tok_count= []
