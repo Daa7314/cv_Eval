@@ -83,7 +83,7 @@ def main():
             vector_matrix = count_vectorizer.fit_transform(data)
             cosine_similarity_matrix = cosine_similarity(vector_matrix)
             vx = pd.DataFrame(cosine_similarity_matrix,['resume','jd_text'])
-            st.write("Your resume and Job description match at: ", vx.loc["resume",1])
+            st.write("Your resume and Job description match at: ", (round(vx.loc["resume",1], 2) *100 , "%"))
 
 #JD keyword extraction
             tok_count= []
