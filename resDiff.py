@@ -38,18 +38,14 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 st.title("speaX: Analayze This! beta!")
 
 
-st.subheader('Analyze any two text files.')
+st.subheader('Compare any two text files.')
 
-st.text("Compare any two documents:")
-st.text("A job posting and your resume/cv")
-st.text("Two news paper articles")
-
-st.text("""There is a lot of information buried within text files, sure a human can spot some of the differences. But machine learning provides 
-tools to do the same task at a scale and speed that can humans cannot match. 
+st.text("""There is a lot of information buried within text files, sure a human can spot some of the differences. \n But machine learning provides 
+tools to do the same task at a scale and speed that can humans cannot match. \n
 So meet "ANALYZE THIS" a tool for analyzing two text files, its still in its beta form so there are still a few bugs to work out. 
-
-#note to users, the system is biased towards the document with the longer text. That means it assumes the shorter text is the goal. This is because it was
-initally bult for evaluate resumes against job postings.
+\n
+#note to users, the system is biased towards the document with the longer text. That means it assumes the shorter text is the goal.\n
+This is because it was initally built to evaluate resumes against job postings.
 
 1. Its super simple to use, upload the two files you'd like compared.
 2. Hit the evaluate button
