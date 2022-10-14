@@ -37,9 +37,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 
-st.text('This tool is designed to analyze two text files')
+st.subheader('This tool is designed to analyze two text files')
 
-st.subheader("Upload the JD and Resume in PDF, Docx, Txt")
+st.text("Upload the JD and Resume in PDF, Docx, Txt")
 def main():
     menu = ["Resume Eval","About"]
     choice = st.sidebar.selectbox("Menu",menu)
