@@ -39,7 +39,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 st.header('Compare your Resume with a Job Listing')
 
-st.title("Rename your resume as A and the Job description as B")
+st.subheader("Upload the JD and Resume in PDF, Docx, Txt")
 def main():
     menu = ["Image","Dataset","Resume Eval","About"]
     choice = st.sidebar.selectbox("Menu",menu)
