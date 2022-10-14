@@ -41,15 +41,15 @@ st.header('Compare your Resume with a Job Listing')
 
 st.title("Rename your resume as A and the Job description as B")
 def main():
-    menu = ["Image","Dataset","DocumentFiles","About"]
+    menu = ["Image","Dataset","Resume Eval","About"]
     choice = st.sidebar.selectbox("Menu",menu)
 
     if choice == "Image":
         st.subheader("Image")
     elif choice == "Dataset":
         st.subheader("Dataset")
-    elif choice == "DocumentFiles":
-        st.subheader("DocumentFiles")
+    elif choice == "Resume Eval":
+        st.subheader("Resume Evaluation")
         docx_files = st.file_uploader("Upload Document", type=["pdf","docx","txt"], accept_multiple_files=True)
         
         if st.button("Evaluate_Resume"):
@@ -83,7 +83,7 @@ def main():
             vector_matrix = count_vectorizer.fit_transform(data)
             cosine_similarity_matrix = cosine_similarity(vector_matrix)
             vx = pd.DataFrame(cosine_similarity_matrix,['resume','jd_text'])
-            st.write("Your resume and Job description match at: ", (round(vx.loc["resume",1], 2) *100 , "%"))
+            st.write("Your resume and Job description match at: ", (round(vx.loc["resume",1], 2) *100 ,'%'))
 
 #JD keyword extraction
             tok_count= []
@@ -139,5 +139,3 @@ if __name__ == '__main__':
 
 st.subheader("About")
 st.info("Built with Streamlit")
-st.info("Jesus Saves @JCharisTech")
-st.text("Jesse E.Agbe(JCharis)")
