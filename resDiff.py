@@ -43,10 +43,11 @@ st.subheader('Compare any two text files.')
 #Text files are filed with alot more information than most humans can currently extract. 
 #But machine learning provides tools to do the same task at a scale and speed that
 #can humans cannot match. 
-st.text("""Meet "ANALYZE THIS!" a  machine learning tool for comparing two text files, \n its still in its beta form so there are still a few bugs to work out. 
+st.text("""Meet "ANALYZE THIS!" a machine learning tool for comparing two text files, \n its still in its beta form so there are still a few bugs to work out. 
 \n
 #note to users, ANALYZE THIS! is biased towards the document with more text i.e.
-it assumes the shorter text is the goal. It was initally built to evaluate resumes against job postings.
+it assumes the shorter text is the goal. 
+We initally built it t evaluate resumes against job postings.
 
 1. Its super simple to use, upload the two files you'd like compared.
 2. Hit the evaluate button
