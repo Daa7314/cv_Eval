@@ -35,7 +35,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 #Display text
-st.title("speaX: Analayze This! beta!")
+st.title("speaX: Analyze This! beta!")
 
 
 st.subheader('Compare any two text files.')
@@ -45,7 +45,7 @@ st.subheader('Compare any two text files.')
 #can humans cannot match. 
 st.text("""Meet "ANALYZE THIS!" a  machine learning tool for comparing two text files, \n its still in its beta form so there are still a few bugs to work out. 
 \n
-#note to users, ANALYZE THIS! is biased towards the document with more text. Therefore
+#note to users, ANALYZE THIS! is biased towards the document with more text i.e.
 it assumes the shorter text is the goal. It was initally built to evaluate resumes against job postings.
 
 1. Its super simple to use, upload the two files you'd like compared.
@@ -69,7 +69,7 @@ def main():
         #st.subheader("Resume Evaluation")
         docx_files = st.file_uploader("Upload Document", type=["pdf","docx","txt"], accept_multiple_files=True)
         
-        if st.button("ANALYZE NOW"):
+        if st.button("ANALYZE THIS"):
             data = []
             for docx_file in docx_files:
                 if docx_file is not None:
@@ -100,7 +100,7 @@ def main():
             vector_matrix = count_vectorizer.fit_transform(data)
             cosine_similarity_matrix = cosine_similarity(vector_matrix)
             vx = pd.DataFrame(cosine_similarity_matrix,['resume','jd_text'])
-            st.write("Your resume and Job description match at: ", (round(vx.loc["resume",1], 2) *100),"%")
+            st.write("Your documents matches at: ", (round(vx.loc["resume",1], 2) *100),"%")
 
 #JD keyword extraction
             tok_count= []
