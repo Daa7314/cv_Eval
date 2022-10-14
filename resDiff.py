@@ -45,8 +45,8 @@ st.subheader('Compare any two text files.')
 #can humans cannot match. 
 st.text("""Meet "ANALYZE THIS!" a  machine learning tool for comparing two text files, \n its still in its beta form so there are still a few bugs to work out. 
 \n
-#note to users, ANALYZE THIS! is biased towards the document with more text. Therefore it assumes the shorter text is the goal. 
-This is because it was initally \n built to evaluate resumes against job postings.
+#note to users, ANALYZE THIS! is biased towards the document with more text. Therefore
+it assumes the shorter text is the goal. It was initally built to evaluate resumes against job postings.
 
 1. Its super simple to use, upload the two files you'd like compared.
 2. Hit the evaluate button
