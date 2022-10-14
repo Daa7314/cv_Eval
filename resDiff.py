@@ -37,7 +37,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 
-st.subheader('This tool analyzes two text files Resumes and Job Descriptions etc.')
+st.subheader('This analyzes two text files Resumes & Job Descriptions.')
 
 st.text("Upload the JD and Resume in PDF, Docx, Txt")
 def main():
