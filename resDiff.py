@@ -34,12 +34,32 @@ from transformers import pipeline
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
+#Display text
+st.title("speaX: Analayze This! beta!")
+
+
+st.subheader('Analyze any two text files.')
+
+st.text("Compare any two documents:")
+st.text("A job posting and your resume/cv")
+st.text("Two news paper articles")
+
+st.text("""There is a lot of information buried within text files, sure a human can spot some of the differences. But machine learning provides 
+tools to do the same task at a scale and speed that can humans cannot match. 
+So meet "ANALYZE THIS" a tool for analyzing two text files, its still in its beta form so there are still a few bugs to work out. 
+
+#note to users, the system is biased towards the document with the longer text. That means it assumes the shorter text is the goal. This is because it was
+initally bult for evaluate resumes against job postings.
+
+1. Its super simple to use, upload the two files you'd like compared.
+2. Hit the evaluate button
+3. You'll get a comparative score
+4. And a text file that shows missing keys in words, and the keywords of importance""")
 
 
 
-st.subheader('This analyzes two text files Resumes & Job Descriptions.')
 
-st.text("Upload the JD and Resume in PDF, Docx, Txt")
+
 def main():
     menu = ["Resume Eval","About"]
     choice = st.sidebar.selectbox("Menu",menu)
@@ -52,7 +72,7 @@ def main():
         #st.subheader("Resume Evaluation")
         docx_files = st.file_uploader("Upload Document", type=["pdf","docx","txt"], accept_multiple_files=True)
         
-        if st.button("Evaluate_Resume"):
+        if st.button("ANALYZE NOW"):
             data = []
             for docx_file in docx_files:
                 if docx_file is not None:
