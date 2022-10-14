@@ -49,10 +49,12 @@ it assumes the shorter text is the goal.
 We initally built it to evaluate resumes against job postings.
 
 1. Its super simple to use, upload the two files you'd like compared.
-2. Hit the evaluate button
-3. You'll get a comparative score
-4. And a text file that shows missing keys in words, and the keywords of importance""")
-
+2. If your document is online, copy and paste into one of the alowed formats
+3. Hit the evaluate button.
+4. You'll get a comparative score.
+5. And a text file that shows missing keys in words, and the keywords of importance.
+""")
+ 
 
 
 
