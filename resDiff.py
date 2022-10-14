@@ -40,14 +40,13 @@ st.title("speaX: Analayze This! beta!")
 
 st.subheader('Compare any two text files.')
 
-st.text("""Text files are filed with alot more information than most humans can currently extract. 
-But machine learning provides tools to do the same task at a scale and speed that
-can humans cannot match. 
-Meet "ANALYZE THIS!" a tool for comparing two text files, \n its still in its beta form so there are still a few bugs to work out. 
+#Text files are filed with alot more information than most humans can currently extract. 
+#But machine learning provides tools to do the same task at a scale and speed that
+#can humans cannot match. 
+st.text("""Meet "ANALYZE THIS!" a  machine learning tool for comparing two text files, \n its still in its beta form so there are still a few bugs to work out. 
 \n
-#note to users, the system is biased towards the document with the longer text. 
-That means it assumes the shorter text is the goal.\n
-This is because it was initally built to evaluate resumes against job postings.
+#note to users, ANALYZE THIS! is biased towards the document with more text. Therefore it assumes the shorter text is the goal. 
+This is because it was initally \n built to evaluate resumes against job postings.
 
 1. Its super simple to use, upload the two files you'd like compared.
 2. Hit the evaluate button
@@ -59,7 +58,7 @@ This is because it was initally built to evaluate resumes against job postings.
 
 
 def main():
-    menu = ["Resume Eval","About"]
+    menu = ["Resume Eval"]
     choice = st.sidebar.selectbox("Menu",menu)
 
     if choice == "Image":
@@ -155,5 +154,4 @@ def main():
 if __name__ == '__main__':
 	main()
 
-st.subheader("About")
 st.info("Built with Streamlit")
